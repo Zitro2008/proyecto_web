@@ -1,0 +1,206 @@
+:root {
+    --primary-color: #2563eb;
+    --text-color: #333;
+    --white: #ffffff;
+    --main-font: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--text-color);
+}
+
+.header-principal {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* LOGO [cite: 12] */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.logo-img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+/* NAVEGACIÓN [cite: 9] */
+.enlaces-nav {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.enlaces-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* EFECTOS HOVER [cite: 23] */
+.enlaces-nav a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* REDES SOCIALES [cite: 11] */
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-sociales img {
+    width: 24px;
+}
+
+/* Animación hover en iconos [cite: 23, 26] */
+.redes-sociales a:hover img {
+    transform: translate(-3px);
+}
+
+/* =========================================
+   ESTILOS PARA EL CONTENIDO PRINCIPAL
+   ========================================= */
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    font-weight: bold;
+}
+
+.seccion-contacto {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    padding: 0 20px;
+}
+
+.seccion-contacto p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.formulario-contacto {
+    background: #f8f9fb;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.elem-formulario {
+    margin-bottom: 1.5rem;
+}
+
+.elem-formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.elem-formulario input,
+.elem-formulario textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: var(--main-font);
+    transition: border-color 0.2s ease;
+}
+
+.elem-formulario input:focus,
+.elem-formulario textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.boton-enviar {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.boton-enviar:hover {
+    background: #1d4ed8;
+}
+
+.footer-clase {
+    background: #f4f6fb;
+    color: var(--text-color);
+    padding: 1.5rem 20px;
+}
+
+.contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contenedor-footer p {
+    font-size: 0.95rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .contenedor-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
