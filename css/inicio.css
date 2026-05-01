@@ -4,86 +4,91 @@
     --white: #ffffff;
     --main-font: 'Roboto', sans-serif;
 }
+body.otro-color {
+    --primary-color: #f39c12; /* Cambiamos el azul por Naranja (puedes usar el que quieras) */
+    --text-color: #fc5050;    /* El texto pasa a ser claro */
+    --white: #1a1a1a;         /* El blanco pasa a ser Negro/Gris muy oscuro */
+    --bg-body: #121212;       /* Fondo general oscuro */
+}
 
-* {
+* { /*estilos generales de la pagina*/
     margin: 0 ;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
-body {
+body { /* cambiar la fuente del texto y el color*/
     font-family: var(--main-font);
     color: var(--text-color);
 }
 
-.header-principal {
+.header-principal { 
     background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* agregar sombra para hacer que se note */
+    padding: 1rem 0; /* agregar espacio arriba y abajo del header */
+    position: sticky; /*hacer que el header siempre este visible */
+    top: 0; /*fijo en la parte de arriba*/
 }
 
 .contenedor-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex; /*hacer que el contenido del header se muestre en una fila*/
+    justify-content: space-between; /*hacer que los elementos se muestren separados*/
+    align-items: center; /*centrar verticalmente */
+    max-width: 1200px; /*hacer que el contenido del header no ocupe todo el ancho */
+    margin: 0 auto; /*centrar el contenido */
     padding: 0 20px;
 }
 
-/* LOGO [cite: 12] */
 .logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--primary-color);
+    display: flex; /*hacer que el contenedor que tiene el logo y el texto se muestre en una fila*/
+    align-items: center; /*centrar verticalmente el logo y el texto*/
+    text-decoration: none; /*quitar el subrayado del texto*/
+    font-weight: bold; /*ponerlo en negrita y azul, en la linea de abajo*/
+    color: var(--primary-color); 
 }
 
-.logo-img {
+.logo-img { /*cambiar el tamaño del logo y separarlo del texto*/
     width: 40px;
     margin-right: 10px;
 }
 
-/* NAVEGACIÓN [cite: 9] */
-.enlaces-nav {
+
+.enlaces-nav { /*hacer que los enlaces del nav se muestren en una fila y con espacio entre ellos*/
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-.enlaces-nav a {
+.enlaces-nav a { /*quitar el subrayado de los enlaces y cambiar el color de la letra*/
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
 }
 
-/* EFECTOS HOVER [cite: 23] */
+/* hacer que los enlaces cambien de color al pasar el mouse por encima  y poner un subradado*/
 .enlaces-nav a:hover {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* REDES SOCIALES [cite: 11] */
+/* hacer que las redes sociales aparezcan en una fila mism */
 .redes-sociales {
     display: flex;
     gap: 15px;
 }
 
-.redes-sociales img {
+.redes-sociales img { /*ajustar el tamaño de las imagenes */
     width: 24px;
 }
 
 
-.redes-sociales a:hover img {
+.redes-sociales a:hover img { /*hacer que las imagenes de las redes sociales se muevan un poco al pasar el mouse por encima*/
     transform: translate(-3px);
 }
 
 
-h1 {
+h1 { /*dar estilo al título principal y centrarlo*/
     font-size: 2.5rem;
     color: var(--primary-color);
     text-align: center;
@@ -91,62 +96,62 @@ h1 {
     font-weight: bold;
 }
 
-.informacion {
+.informacion { /*dar estilo a la sección de información y centrarla*/
     max-width: 900px;
     margin: 2rem auto 2rem auto;
     padding: 0 20px;
 }
 
-.informacion h2 {
+.informacion h2 { /*dar estilo al título de cambiando el color al prinipal*/
     font-size: 1.75rem;
     margin-bottom: 0.75rem;
     color: var(--primary-color);
 }
 
-.informacion p {
+.informacion p { /*dar estilo al texto de la sección de información y cambiar el color*/
     margin-bottom: 1.5rem;
     line-height: 1.65;
-    color: #555;
+    color: var(--text-color);
 }
 
-.lista-informacion {
-    list-style-type: disc;
+.lista-informacion { /*dar estilo a la lista de y cambiar la viñeta  */
+    list-style-type:circle;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.lista-informacion li {
+.lista-informacion li { /*dar estilo a los elementos de la lista*/
     margin-bottom: 0.75rem;
     line-height: 1.65;
-    color: #555;
+    color: var(--text-color);
 }
 
-/* Servicios */
-.servicios {
+
+.servicios { /*dar estilo a la sección de servicios y centrarla*/
     max-width: 900px;
     margin: 2rem auto 2rem auto;
     padding: 0 20px;
 }
 
-.servicios h2 {
+.servicios h2 { /*dar estilo al título de la sección de servicios*/
     font-size: 1.75rem;
     margin-bottom: 0.75rem;
     color: var(--primary-color);
 }
 
-.servicios p {
+.servicios p { /*dar estilo al texto de la sección de servicios y cambiar el color*/
     margin-bottom: 1.5rem;
     line-height: 1.65;
-    color: #555;
+    color: var(--text-color);
 }
 
-.servicios-cards {
+.servicios-cards { /*hacer que las tarjetas de servicios se muestren en un grid y con espacio entre ellas*/
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /*hacer que el grid tenga 3 columnas de igual tamaño*/
     gap: 1rem;
 }
 
-.servicio-card {
+.servicio-card { /*cambiar el fondo, el borde y el color del texto de las tarjetas*/
     background: #f8f9fb;
     border: 1px solid rgba(37, 99, 235, 0.12);
     border-radius: 12px;
@@ -160,69 +165,67 @@ h1 {
 
 .servicio-card p {
     line-height: 1.6;
-    color: #444;
+    color: var(--text-color);
 }
 
-/* Proyectos */
-.proyectos {
+
+.proyectos { /*dar estilo a la sección de proyectos y centrarla*/
     max-width: 900px;
     margin: 2rem auto 2rem auto;
     padding: 0 20px;
 }
 
-.proyectos h2 {
+.proyectos h2 { /*dar estilo al título de la sección de proyectos y cambiar el color al principal*/
     font-size: 1.75rem;
     margin-bottom: 0.75rem;
     color: var(--primary-color);
 }
 
-.proyectos p {
+.proyectos p { /*dar estilo al texto de la sección de proyectos y cambiar el color*/
     margin-bottom: 1.5rem;
     line-height: 1.65;
-    color: #555;
+    color: var(--text-color);
 }
 
 .tabla-proyectos {
     border-collapse: collapse; /* hace que los bordes de la tabla se unan */
     background: #f8f9fb;
     border: 1px solid rgba(37, 99, 235, 0.12);
-    border-radius: 5px;
+    border-radius: 5px; /*borde redondo*/
 }
 
-.tabla-proyectos thead {
+.tabla-proyectos thead { /*dar estilo a la cabecera de la tabla y cambiar el color al principal*/
     background-color: var(--primary-color);
     color: white;
 }
 
-.tabla-proyectos th {
+.tabla-proyectos th { /*dar estilo a las celdas de la cabecera de la tabla */
     padding: 1rem;
     font-weight: 600;
 }
 
 .tabla-proyectos td {
     padding: 1rem;
-    border-top: 1px solid rgba(37, 99, 235, 0.12);
-    border-left: 1px solid rgba(37, 99, 235, 0.12);
+    border-top: 1px solid rgba(37, 99, 235, 0.12); /* agregar un borde entre las filas de la tabla */
+    border-left: 1px solid rgba(37, 99, 235, 0.12); /* agregar un borde entre las columnas de la tabla */
 }
 
-.tabla-proyectos tbody tr:hover {
+.tabla-proyectos tbody tr:hover { /*hacer que las filas de la tabla cambien de color al pasar el mouse por encima*/
     background-color: #f0f4f9;
 }
 
-.footer-clase {
+.footer-clase { /*dar estilo al footer y cambiar el fondo y el color del texto*/
     background: #f4f6fb;
     color: var(--text-color);
     padding: 1.5rem 20px;
-    position: sticky;
-    bottom: 0;
 }
 
 .contenedor-footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 1200px; /*hacer que el contenido del footer no ocupe toda la pantalla*/
+    margin: 0 auto; /*centrar el contenido del footer*/
+    display: flex; /*hacer que el contenido del footer se muestre en una fila*/
+    justify-content: space-between; /*hacer que los elementos se muestre con espacio entre ellos*/
+    align-items: center; /*cenrar verticalmente el contenido del footer*/
     gap: 1rem;
 }
 
@@ -230,25 +233,18 @@ h1 {
     font-size: 0.95rem;
 }
 
-.footer-social {
+.footer-social { /*hacer que las redes se muestren una al lado de la otra*/
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+    
 }
 
-.footer-social a {
+.footer-social a { /*hacer que el texto de las redes sociales sea negro y cuando pones el raton encima sea azul*/
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.footer-social a:hover {
+.footer-social a:hover { /*hacer que sea azul al poner el raton encima*/
     color: var(--primary-color);
 }
-
-@media (max-width: 768px) {
-    .contenedor-footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-} 

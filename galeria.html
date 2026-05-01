@@ -9,56 +9,55 @@
 </head>
 <body>
 
-    <header class="header-principal" id="top">
+    <header class="header-principal">
         <div class="contenedor-header">
-            
-            <div class="logo">
-                <a href="inicio.html">
-                    <img src="img/logo.svg" alt="Logo de mi sitio web" class="logo-img">
+
+            <div class="logo"> <!--clase para el logo y el titulo-->
+                <a href="inicio.html"><img src="img/logo.svg" alt="Logo de mi sitio web" class="logo-img"> <!--logo de la web-->
+                    <p>Mi portfolio de 2º SMR</p>
                 </a>
-                <p>Mi portfolio de 2º SMR</p>
             </div>
 
-            <nav class="nav-principal">
+            <nav class="nav-principal"> <!--Menu de navegacion de las paginas de la web-->
                 <ul class="enlaces-nav">
-                    <li><a href="inicio.html" target="_blank">Inicio</a></li>
-                    <li><a href="galeria.html" target="_blank">Galería</a></li>
-                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                    <li><a href="inicio.html" target="_blank">Inicio</a></li> <!--link al inicio en una nueva pestaña-->
+                    <li><a href="galeria.html" target="_blank">Galería</a></li> <!--link a la galeria en una nueva pestaña-->
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li> <!--link al contacto en una nueva pestaña-->
                 </ul>
             </nav>
 
             <div class="redes-sociales">
                 <a href="https://wa.me/636260246" target="_blank">
-                    <img src="img/whatsapp.svg" alt="WhatsApp">
+                    <img src="img/whatsapp.svg" alt="Whatsapp">
                 </a>
                 <a href="https://instagram.com/hugo_ortizp08" target="_blank">
                     <img src="img/instagram.svg" alt="Instagram">
                 </a>
                 <a href="https://tiktok.com/@zapatoszitro" target="_blank">
-                    <img src="img/tiktok.svg" alt="TikTok">
+                    <img src="img/tiktok.svg" alt="Tiktok">
                 </a>
+                <button id="btn-tema" title="Cambiar color de la web"><img src="/img/paleta-colores.svg" id="imagen-paleta" alt=""></button>
             </div>
 
         </div>
     </header>
-
     <main>
         <section class="galeria">
             <h1 class="galeria-titulo">Galería de imágenes</h1>
-            <div class="galeria-grid">
+            <div class="galeria-grid"> <!--contenedor con grid para organizar las imagenes en filas y columnas-->
                 <div class="galeria-item"><img src="img/imagen1.jpg" alt="Imagen 1"></div>
                 <div class="galeria-item"><img src="img/imagen2.jpg" alt="Imagen 2"></div>
                 <div class="galeria-item"><img src="img/imagen3.jpg" alt="Imagen 3"></div>
                 <div class="galeria-item"><img src="img/imagen4.jpg" alt="Imagen 4"></div>
                 <div class="galeria-item"><img src="img/imagen5.jpg" alt="Imagen 5"></div>
                 <div class="galeria-item"><img src="img/imagen6.jpg" alt="Imagen 6"></div>
-                <div class="galeria-item galeria-span-2"><img src="img/imagen7.jpg" alt="Imagen 7"></div>
+                <div class="galeria-item galeria-span-2"><img src="img/imagen7.jpg" alt="Imagen 7"></div> <!--esta imagen ocupa el doble de espacio en el grid-->
                 <div class="galeria-item"><img src="img/imagen8.jpg" alt="Imagen 8"></div>
             </div>
         </section>
     </main>
 
-    <footer class="footer-clase">
+    <footer class="footer-clase"> <!--footer con varias clases para hacer varios flex-->
         <div class="contenedor-footer">
             <p>© 2026 Hugo Ortiz - Todos los derechos reservados.</p>
             <div class="footer-social">
@@ -68,6 +67,7 @@
             </div>
         </div>
     </footer>
+      <script src="script.js"></script>
 
 </body>
 </html>

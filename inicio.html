@@ -14,17 +14,17 @@
     <header class="header-principal">
         <div class="contenedor-header">
 
-            <div class="logo">
-                <a href="inicio.html"><img src="img/logo.svg" alt="Logo de mi sitio web" class="logo-img">
+            <div class="logo"> <!--clase para el logo y el titulo-->
+                <a href="inicio.html"><img src="img/logo.svg" alt="Logo de mi sitio web" class="logo-img"> <!--logo de la web-->
                     <p>Mi portfolio de 2º SMR</p>
                 </a>
             </div>
 
-            <nav class="nav-principal">
+            <nav class="nav-principal"> <!--Menu de navegacion de las paginas de la web-->
                 <ul class="enlaces-nav">
-                    <li><a href="inicio.html" target="_blank">Inicio</a></li>
-                    <li><a href="galeria.html" target="_blank">Galería</a></li>
-                    <li><a href="contacto.html" target="_blank">Contacto</a></li>
+                    <li><a href="inicio.html" target="_blank">Inicio</a></li> <!--link al inicio en una nueva pestaña-->
+                    <li><a href="galeria.html" target="_blank">Galería</a></li> <!--link a la galeria en una nueva pestaña-->
+                    <li><a href="contacto.html" target="_blank">Contacto</a></li> <!--link al contacto en una nueva pestaña-->
                 </ul>
             </nav>
 
@@ -38,17 +38,18 @@
                 <a href="https://tiktok.com/@zapatoszitro" target="_blank">
                     <img src="img/tiktok.svg" alt="Tiktok">
                 </a>
+                <button id="btn-tema" title="Cambiar color de la web"><img src="/img/paleta-colores.svg" id="imagen-paleta" alt=""></button>
             </div>
 
         </div>
     </header>
 
     <main>
-        <section class="informacion">
+        <section class="informacion"> <!--texto basico-->
             <h2>Sobre este proyecto</h2>
             <p>Esta página principal presenta una estructura sencilla y clara para mostrar contenidos, imágenes y
                 enlaces de contacto.</p>
-            <ul class="lista-informacion">
+            <ul class="lista-informacion"> <!--lista desordenada-->
                 <li>Diseño responsivo: La web se adapta a pantallas grandes y pequeñas para una navegación cómoda desde cualquier dispositivo.</li>
                 <li>Contenido accesible: Se ha usado un texto claro, enlaces visibles y una organización de secciones directa para facilitar el uso.</li>
             </ul>
@@ -57,9 +58,9 @@
         <section class="servicios">
             <h2>Mis servicios</h2>
             <p>Ofrezco soluciones en desarrollo web y diseño digital para proyectos personales y profesionales.</p>
-            <div class="servicios-cards">
+            <div class="servicios-cards"> <!--contenedor para flex-->
                 <article class="servicio-card">
-                    <h3>Desarrollo Web</h3>
+                    <h3>Desarrollo Web</h3> <!--tarjetas separadas en articlulos-->
                     <p>Creación de sitios web modernos y funcionales utilizando HTML, CSS y JavaScript.</p>
                 </article>
                 <article class="servicio-card">
@@ -77,7 +78,7 @@
         <section class="proyectos">
             <h2>Proyectos destacados</h2>
             <p>Aquí algunos de mis trabajos más recientes en desarrollo web y diseño.</p>
-            <table class="tabla-proyectos">
+            <table class="tabla-proyectos"> <!--tabla con cabecera-->
                 <thead>
                     <tr>
                         <th>Proyecto</th>
@@ -104,9 +105,10 @@
                 </tbody>
             </table>
         </section>
+        <p>¡Gracias por visitar mi sitio web!</main>p>
     </main>
 
-    <footer class="footer-clase">
+     <footer class="footer-clase"> <!--footer con varias clases para hacer varios flex-->
         <div class="contenedor-footer">
             <p>© 2026 Hugo Ortiz - Todos los derechos reservados.</p>
             <div class="footer-social">
@@ -116,7 +118,7 @@
             </div>
         </div>
     </footer>
-
+      <script src="script.js"></script>
 </body>
 
 </html>

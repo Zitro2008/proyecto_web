@@ -4,142 +4,122 @@
     --white: #ffffff;
     --main-font: 'Roboto', sans-serif;
 }
-
-* {
+body.otro-color {
+    --primary-color: #f39c12; /* Cambiamos el azul por Naranja (puedes usar el que quieras) */
+    --text-color: #fc5050;    /* El texto pasa a ser claro */
+    --white: #1a1a1a;         /* El blanco pasa a ser Negro/Gris muy oscuro */
+    --bg-body: #121212;       /* Fondo general oscuro */
+}
+* { /*estilos generales de la pagina*/
     margin: 0 ;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body { /* cambiar la fuente del texto y el color*/
     font-family: var(--main-font);
     color: var(--text-color);
 }
 
-.header-principal {
+.header-principal { 
     background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* agregar sombra para hacer que se note */
+    padding: 1rem 0; /* agregar espacio arriba y abajo del header */
+    position: sticky; /*hacer que el header siempre este visible */
+    top: 0; /*fijo en la parte de arriba*/
 }
 
 .contenedor-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex; /*hacer que el contenido del header se muestre en una fila*/
+    justify-content: space-between; /*hacer que los elementos se muestren separados*/
+    align-items: center; /*centrar verticalmente */
+    max-width: 1200px; /*hacer que el contenido del header no ocupe todo el ancho */
+    margin: 0 auto; /*centrar el contenido */
     padding: 0 20px;
 }
 
-/* LOGO [cite: 12] */
 .logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--primary-color);
+    display: flex; /*hacer que el contenedor que tiene el logo y el texto se muestre en una fila*/
+    align-items: center; /*centrar verticalmente el logo y el texto*/
+    text-decoration: none; /*quitar el subrayado del texto*/
+    font-weight: bold; /*ponerlo en negrita y azul, en la linea de abajo*/
+    color: var(--primary-color); 
 }
 
-.logo-img {
+.logo-img { /*cambiar el tamaño del logo y separarlo del texto*/
     width: 40px;
     margin-right: 10px;
 }
 
-/* NAVEGACIÓN [cite: 9] */
-.enlaces-nav {
+
+.enlaces-nav { /*hacer que los enlaces del nav se muestren en una fila y con espacio entre ellos*/
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-.enlaces-nav a {
+.enlaces-nav a { /*quitar el subrayado de los enlaces y cambiar el color de la letra*/
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
 }
 
-/* EFECTOS HOVER [cite: 23] */
+/* hacer que los enlaces cambien de color al pasar el mouse por encima  y poner un subradado*/
 .enlaces-nav a:hover {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* REDES SOCIALES [cite: 11] */
+/* hacer que las redes sociales aparezcan en una fila mism */
 .redes-sociales {
     display: flex;
     gap: 15px;
 }
 
-.redes-sociales img {
+.redes-sociales img { /*ajustar el tamaño de las imagenes */
     width: 24px;
 }
 
-/* Animación hover en iconos [cite: 23, 26] */
-.redes-sociales a:hover img {
+
+.redes-sociales a:hover img { /*hacer que las imagenes de las redes sociales se muevan un poco al pasar el mouse por encima*/
     transform: translate(-3px);
 }
 
-/*Responsive*/
-@media (max-width: 768px) {
-    .contenedor-header {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-/* Galería */
+/* galería */
 .galeria {
-    max-width: 1200px;
-    margin: 2rem auto;
+    max-width: 1200px; /* ancho maximo para centrar el contenido */
+    margin: 2rem auto; /* centrado vertical y horizontal */
     padding: 0 20px;
 }
 
 .galeria-titulo {
-    font-size: 2rem;
+    font-size: 2rem; /* tamaño del titulo margen y color del texto */
     margin-bottom: 1.5rem;
     color: var(--primary-color);
 }
 
 .galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+    display: grid; /*hacer que las imagenes se organicen en un grid */
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /*hacer que el grid tenga 3 columnas de igual tamaño */
+    gap: 1rem; /* hueco entre las imagenes */
 }
 
 .galeria-item {
-    overflow: hidden;
-    border-radius: 12px;
-    background: #f8f9fb;
+    overflow: hidden; /* para que las imagenes no se salgan del contenedor al hacer zoom */
+    border-radius: 12px; /*borde redondo*/
 }
 
 .galeria-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
+/*hacer que las imagenes ocupen todo el contenedor*/
 }
 
-.galeria-item:hover img {
-    transform: scale(1.03);
-}
 
 .galeria-span-2 {
-    grid-column: span 2;
+    grid-column: span 2; /*hacer que una de las fotos ocupe el espacio de dos*/
 }
 
-@media (max-width: 768px) {
-    .galeria-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .galeria-span-2 {
-        grid-column: span 1;
-    }
-}
 
 .footer-clase {
     background: #f4f6fb;
@@ -148,11 +128,11 @@ body {
 }
 
 .contenedor-footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 1200px; /*hacer que el contenido del footer no ocupe toda la pantalla*/
+    margin: 0 auto; /*centrar el contenido del footer*/
+    display: flex; /*hacer que el contenido del footer se muestre en una fila*/
+    justify-content: space-between; /*hacer que los elementos se muestre con espacio entre ellos*/
+    align-items: center; /*cenrar verticalmente el contenido del footer*/
     gap: 1rem;
 }
 
@@ -160,25 +140,18 @@ body {
     font-size: 0.95rem;
 }
 
-.footer-social {
+.footer-social { /*hacer que las redes se muestren una al lado de la otra*/
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+    
 }
 
-.footer-social a {
+.footer-social a { /*hacer que el texto de las redes sociales sea negro y cuando pones el raton encima sea azul*/
     color: var(--text-color);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.footer-social a:hover {
+.footer-social a:hover { /*hacer que sea azul al poner el raton encima*/
     color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-    .contenedor-footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }
